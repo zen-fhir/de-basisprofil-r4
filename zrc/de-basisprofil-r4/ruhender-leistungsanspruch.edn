@@ -1,0 +1,13 @@
+{ns de-basisprofil-r4.ruhender-leistungsanspruch,
+ import #{hl7-fhir-r4-core.Period zen.fhir hl7-fhir-r4-core.Coding},
+ schema {:zen.fhir/version "0.6.30-7",
+         :zen/tags #{zen.fhir/extension
+                     zen/schema
+                     zen.fhir/structure-schema},
+         :zen.fhir/profileUri "http://fhir.de/StructureDefinition/gkv/ruhender-leistungsanspruch",
+         :require #{:dauer :art},
+         :type zen/map,
+         :zen/desc "Gibt Art und Dauer des ruhenden Leistungsanspruchs des Versicherten bei dem unter Klasse Kostenträger angegebenen Kostenträger an",
+         :keys {:art {:confirms #{hl7-fhir-r4-core.Coding/schema},
+                      :zen/desc "Gibt die Art des ruhenden Leistungsanspruchs an."},
+                :dauer {:confirms #{hl7-fhir-r4-core.Period/schema}}}}}

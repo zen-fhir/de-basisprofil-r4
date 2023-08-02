@@ -1,0 +1,10 @@
+{ns de-basisprofil-r4.version-vsdm,
+ import #{zen.fhir hl7-fhir-r4-core.string},
+ schema {:zen/tags #{zen.fhir/extension
+                     zen/schema
+                     zen.fhir/structure-schema},
+         :zen/desc "Extension zur Erfassung der Version des CDM-Datensatzes auf der eGK",
+         :zen.fhir/type "string",
+         :zen.fhir/profileUri "http://fhir.de/StructureDefinition/gkv/version-vsdm",
+         :zen.fhir/version "0.6.30-7",
+         :confirms #{hl7-fhir-r4-core.string/schema}}}

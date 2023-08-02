@@ -1,0 +1,10 @@
+{ns de-basisprofil-r4.besondere-personengruppe,
+ import #{zen.fhir hl7-fhir-r4-core.Coding},
+ schema {:zen/tags #{zen.fhir/extension
+                     zen/schema
+                     zen.fhir/structure-schema},
+         :zen/desc "Gibt die Zugehörigkeit des Versicherten zu einer besonderen Personengruppe\r\nan.",
+         :zen.fhir/type "Coding",
+         :zen.fhir/profileUri "http://fhir.de/StructureDefinition/gkv/besondere-personengruppe",
+         :zen.fhir/version "0.6.30-7",
+         :confirms #{hl7-fhir-r4-core.Coding/schema}}}

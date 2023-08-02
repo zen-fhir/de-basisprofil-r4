@@ -1,0 +1,9 @@
+{ns de-basisprofil-r4.value-set.valueset-atc,
+ import #{zen.fhir},
+ value-set {:zen/tags #{zen.fhir/value-set},
+            :zen/desc "Anatomisch-therapeutisch-chemische Klassifkation (ATC) mit Tagesdosen deutsche Fassung",
+            :zen.fhir/version "0.6.30-7",
+            :fhir/code-systems #{{:fhir/url "http://fhir.de/CodeSystem/bfarm/atc",
+                                  :zen.fhir/content :not-present}},
+            :uri "http://fhir.de/ValueSet/bfarm/atc",
+            :version "1.4.0"}}

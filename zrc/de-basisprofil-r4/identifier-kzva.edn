@@ -1,0 +1,26 @@
+{ns de-basisprofil-r4.identifier-kzva,
+ import #{zen.fhir
+          de-basisprofil-r4.value-set.valueset-identifier-type-de-basis
+          hl7-fhir-r4-core.Identifier},
+ schema {:zen.fhir/version "0.6.30-7",
+         :confirms #{hl7-fhir-r4-core.Identifier/schema},
+         :zen/tags #{zen/schema zen.fhir/structure-schema},
+         :zen.fhir/profileUri "http://fhir.de/StructureDefinition/identifier-kzva",
+         :require #{:system :value},
+         :type zen/map,
+         :zen/desc "Identifier-Profil für die Abbildung einer KZVAbrechnungsnummer",
+         :keys {:use {:const {:value "official"}},
+                :type {:match {:coding #{{:system "http://fhir.de/CodeSystem/identifier-type-de-basis",
+                                          :code "KZVA"}}},
+                       :zen.fhir/value-set {:symbol de-basisprofil-r4.value-set.valueset-identifier-type-de-basis/value-set,
+                                            :strength :extensible}},
+                :system {:const {:value "http://fhir.de/sid/kzbv/kzvabrechnungsnummer"}},
+                :assigner {:type zen/map,
+                           :keys {:identifier {:type zen/map,
+                                               :keys {:system {:const {:value "http://fhir.de/sid/arge-ik/iknr"}}},
+                                               :require #{:system
+                                                          :value}}},
+                           :require #{:display},
+                           :confirms #{zen.fhir/Reference},
+                           :zen.fhir/reference {:refers #{}}}},
+         :zen.fhir/type "Identifier"}}

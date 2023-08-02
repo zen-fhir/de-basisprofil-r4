@@ -1,0 +1,18 @@
+{ns de-basisprofil-r4.value-set.1.2.276.0.76.11.33--20180713132759,
+ import #{zen.fhir},
+ value-set {:zen/tags #{zen.fhir/value-set},
+            :zen/desc "**confidentialityCode (XDSDocumentEntry)**\r\nThe code specifying the level of confidentiality of an XDS Document.",
+            :zen.fhir/version "0.6.30-7",
+            :fhir/code-systems #{{:fhir/url "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+                                  :zen.fhir/content :bundled}
+                                 {:fhir/url "http://ihe-d.de/CodeSystems/BetroffeneneinschaetzungVertraulichkeitsstufe",
+                                  :zen.fhir/content :bundled}},
+            :uri "http://ihe-d.de/ValueSets/IHEXDSconfidentialityCode",
+            :version "2018-07-13T13:27:59",
+            :ftr {:module "de-basisprofil-r4",
+                  :source-url "https://storage.googleapis.com",
+                  :source-type :cloud-storage,
+                  :ftr-path "ftr",
+                  :tag "init",
+                  :validation-index {:type :nippy,
+                                     :file "index.nippy"}}}}

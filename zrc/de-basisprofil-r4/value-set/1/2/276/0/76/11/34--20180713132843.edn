@@ -1,0 +1,26 @@
+{ns de-basisprofil-r4.value-set.1.2.276.0.76.11.34--20180713132843,
+ import #{zen.fhir},
+ value-set {:zen/tags #{zen.fhir/value-set},
+            :zen/desc "**eventCodeList (XDSDocumentEntry)**\r\nThis list of codes represents the main clinical acts being documented in an XDS Document.",
+            :zen.fhir/version "0.6.30-7",
+            :fhir/code-systems #{{:fhir/url "http://ihe-d.de/CodeSystems/FallkontextBeiDokumentenerstellung",
+                                  :zen.fhir/content :not-present}
+                                 {:fhir/url "urn:oid:1.2.840.10008.6.1.19",
+                                  :zen.fhir/content :not-present}
+                                 {:fhir/url "urn:oid:1.2.840.10008.6.1.2",
+                                  :zen.fhir/content :not-present}
+                                 {:fhir/url "http://ihe.net/fhir/ValueSet/IHE.FormatCode.codesystem",
+                                  :zen.fhir/content :bundled}
+                                 {:fhir/url "http://ihe-d.de/CodeSystems/DokumentenWarnhinweise",
+                                  :zen.fhir/content :not-present}
+                                 {:fhir/url "http://hl7.org/fhir/ValueSet/signature-type",
+                                  :zen.fhir/content :not-present}},
+            :uri "http://ihe-d.de/ValueSets/IHEXDSeventCodeList",
+            :version "2018-07-13T13:28:43",
+            :ftr {:module "de-basisprofil-r4",
+                  :source-url "https://storage.googleapis.com",
+                  :source-type :cloud-storage,
+                  :ftr-path "ftr",
+                  :tag "init",
+                  :validation-index {:type :nippy,
+                                     :file "index.nippy"}}}}

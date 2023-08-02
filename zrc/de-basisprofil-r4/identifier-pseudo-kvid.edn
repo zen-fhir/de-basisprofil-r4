@@ -1,0 +1,17 @@
+{ns de-basisprofil-r4.identifier-pseudo-kvid,
+ import #{zen.fhir
+          de-basisprofil-r4.value-set.valueset-identifier-type-de-basis
+          hl7-fhir-r4-core.Identifier},
+ schema {:zen.fhir/version "0.6.30-7",
+         :confirms #{hl7-fhir-r4-core.Identifier/schema},
+         :zen/tags #{zen/schema zen.fhir/structure-schema},
+         :zen.fhir/profileUri "http://fhir.de/StructureDefinition/identifier-pseudo-kvid",
+         :require #{:system :value},
+         :type zen/map,
+         :zen/desc "Identifier-Profil für die pseudonymisierte Krankenversichertennummer (Wird für Registermeldungen verwendet)",
+         :keys {:type {:match {:coding #{{:system "http://terminology.hl7.org/CodeSystem/v2-0203",
+                                          :code "ANON"}}},
+                       :zen.fhir/value-set {:symbol de-basisprofil-r4.value-set.valueset-identifier-type-de-basis/value-set,
+                                            :strength :extensible}},
+                :system {:const {:value "http://fhir.de/sid/gkv/pseudo-kvid"}}},
+         :zen.fhir/type "Identifier"}}

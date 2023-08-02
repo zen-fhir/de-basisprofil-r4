@@ -1,0 +1,18 @@
+{ns de-basisprofil-r4.value-set.1.2.276.0.76.11.38--20180713162205,
+ import #{zen.fhir},
+ value-set {:zen/tags #{zen.fhir/value-set},
+            :zen/desc "**typeCode (XDSDocumentEntry)**\r\nA low-level classification of XDS Documents within a classCode that describes class, event, specialty, and setting.",
+            :zen.fhir/version "0.6.30-7",
+            :fhir/code-systems #{{:fhir/url "http://ihe-d.de/CodeSystems/IHEXDStypeCode",
+                                  :zen.fhir/content :bundled}
+                                 {:fhir/url "http://loinc.org",
+                                  :zen.fhir/content :bundled}},
+            :uri "http://ihe-d.de/ValueSets/IHEXDStypeCode",
+            :version "2018-07-13T16:22:05",
+            :ftr {:module "de-basisprofil-r4",
+                  :source-url "https://storage.googleapis.com",
+                  :source-type :cloud-storage,
+                  :ftr-path "ftr",
+                  :tag "init",
+                  :validation-index {:type :nippy,
+                                     :file "index.nippy"}}}}

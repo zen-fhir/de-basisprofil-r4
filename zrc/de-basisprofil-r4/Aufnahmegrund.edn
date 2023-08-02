@@ -1,0 +1,21 @@
+{ns de-basisprofil-r4.Aufnahmegrund,
+ import #{zen.fhir
+          de-basisprofil-r4.value-set.AufnahmegrundVierteStelleVS
+          hl7-fhir-r4-core.Coding
+          de-basisprofil-r4.value-set.AufnahmegrundErsteUndZweiteStelleVS
+          de-basisprofil-r4.value-set.AufnahmegrundDritteStelleVS},
+ schema {:zen/tags #{zen.fhir/extension
+                     zen/schema
+                     zen.fhir/structure-schema},
+         :zen.fhir/profileUri "http://fhir.de/StructureDefinition/Aufnahmegrund",
+         :zen.fhir/version "0.6.30-7",
+         :type zen/map,
+         :keys {:ErsteUndZweiteStelle {:confirms #{hl7-fhir-r4-core.Coding/schema},
+                                       :zen.fhir/value-set {:symbol de-basisprofil-r4.value-set.AufnahmegrundErsteUndZweiteStelleVS/value-set,
+                                                            :strength :required}},
+                :DritteStelle {:confirms #{hl7-fhir-r4-core.Coding/schema},
+                               :zen.fhir/value-set {:symbol de-basisprofil-r4.value-set.AufnahmegrundDritteStelleVS/value-set,
+                                                    :strength :required}},
+                :VierteStelle {:confirms #{hl7-fhir-r4-core.Coding/schema},
+                               :zen.fhir/value-set {:symbol de-basisprofil-r4.value-set.AufnahmegrundVierteStelleVS/value-set,
+                                                    :strength :required}}}}}

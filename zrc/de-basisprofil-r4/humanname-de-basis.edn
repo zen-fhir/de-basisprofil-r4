@@ -1,0 +1,34 @@
+{ns de-basisprofil-r4.humanname-de-basis,
+ import #{zen.fhir
+          de-basisprofil-r4.humanname-namenszusatz
+          hl7-fhir-r4-core.humanname-own-prefix
+          hl7-fhir-r4-core.HumanName
+          hl7-fhir-r4-core.humanname-own-name
+          hl7-fhir-r4-core.iso21090-EN-qualifier},
+ schema {:zen/tags #{zen/schema zen.fhir/structure-schema},
+         :zen/desc "Personenname mit in Deutschland üblichen Erweiterungen",
+         :zen.fhir/type "HumanName",
+         :zen.fhir/profileUri "http://fhir.de/StructureDefinition/humanname-de-basis",
+         :zen.fhir/version "0.6.30-7",
+         :confirms #{hl7-fhir-r4-core.HumanName/schema},
+         :type zen/map,
+         :keys {:_family {:type zen/map,
+                          :keys {:namenszusatz {:confirms #{de-basisprofil-r4.humanname-namenszusatz/schema},
+                                                :fhir/extensionUri "http://fhir.de/StructureDefinition/humanname-namenszusatz"},
+                                 :nachname {:confirms #{hl7-fhir-r4-core.humanname-own-name/schema},
+                                            :fhir/extensionUri "http://hl7.org/fhir/StructureDefinition/humanname-own-name",
+                                            :zen/desc "Nachname ohne Vor- und Zusätze"},
+                                 :vorsatzwort {:confirms #{hl7-fhir-r4-core.humanname-own-prefix/schema},
+                                               :fhir/extensionUri "http://hl7.org/fhir/StructureDefinition/humanname-own-prefix",
+                                               :zen/desc "Vorsatzwort"}}},
+                :suffix {:type zen/vector,
+                         :every {:zen/desc "Namensteile nach dem Nachnamen"}},
+                :given {:type zen/vector,
+                        :every {:zen/desc "Vorname"}},
+                :family {:zen/desc "Familienname"},
+                :_prefix {:type zen/vector,
+                          :every {:type zen/map,
+                                  :keys {:prefix-qualifier {:confirms #{hl7-fhir-r4-core.iso21090-EN-qualifier/schema},
+                                                            :fhir/extensionUri "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier"}}}},
+                :prefix {:type zen/vector,
+                         :every {:zen/desc "Namensteile vor dem Vornamen"}}}}}

@@ -1,0 +1,17 @@
+{ns de-basisprofil-r4.identifier-kvid-10,
+ import #{zen.fhir
+          de-basisprofil-r4.value-set.valueset-identifier-type-de-basis
+          hl7-fhir-r4-core.Identifier},
+ schema {:zen.fhir/version "0.6.30-7",
+         :confirms #{hl7-fhir-r4-core.Identifier/schema},
+         :zen/tags #{zen/schema zen.fhir/structure-schema},
+         :zen.fhir/profileUri "http://fhir.de/StructureDefinition/identifier-kvid-10",
+         :require #{:system :value},
+         :type zen/map,
+         :zen/desc "Identifier-Profil für die 10-stellige Krankenversichertennummer",
+         :keys {:type {:match {:coding #{{:system "http://fhir.de/CodeSystem/identifier-type-de-basis",
+                                          :code "GKV"}}},
+                       :zen.fhir/value-set {:symbol de-basisprofil-r4.value-set.valueset-identifier-type-de-basis/value-set,
+                                            :strength :extensible}},
+                :system {:const {:value "http://fhir.de/sid/gkv/kvid-10"}}},
+         :zen.fhir/type "Identifier"}}

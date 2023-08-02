@@ -1,0 +1,18 @@
+{ns de-basisprofil-r4.CodingOPS,
+ import #{zen.fhir
+          de-basisprofil-r4.seitenlokalisation
+          hl7-fhir-r4-core.Coding},
+ schema {:zen.fhir/version "0.6.30-7",
+         :confirms #{hl7-fhir-r4-core.Coding/schema},
+         :zen/tags #{zen/schema zen.fhir/structure-schema},
+         :zen.fhir/profileUri "http://fhir.de/StructureDefinition/CodingOPS",
+         :require #{:system :code :version},
+         :type zen/map,
+         :zen/desc "Abbildung der Mindestanforderungen eines OPS Prozedurencodes",
+         :keys {:Seitenlokalisation {:confirms #{de-basisprofil-r4.seitenlokalisation/schema},
+                                     :fhir/extensionUri "http://fhir.de/StructureDefinition/seitenlokalisation"},
+                :system {:const {:value "http://fhir.de/CodeSystem/bfarm/ops"},
+                         :zen/desc "Canonische CodeSystem URL für OPS"},
+                :version {:zen/desc "Die Jahresversion des OPS Kataloges. Angegeben wird immer die vierstellige Jahreszahl (z.B. \"2017\")"},
+                :code {:zen/desc "Der OPS-Code"}},
+         :zen.fhir/type "Coding"}}

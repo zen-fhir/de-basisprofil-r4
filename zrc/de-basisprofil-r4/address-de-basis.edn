@@ -1,0 +1,44 @@
+{ns de-basisprofil-r4.address-de-basis,
+ import #{hl7-fhir-r4-core.iso21090-ADXP-additionalLocator
+          de-basisprofil-r4.value-set.ValueSetISO31662DE
+          zen.fhir
+          hl7-fhir-r4-core.value-set.iso3166-1-2
+          hl7-fhir-r4-core.iso21090-ADXP-streetName
+          hl7-fhir-r4-core.iso21090-ADXP-houseNumber
+          hl7-fhir-r4-core.iso21090-ADXP-precinct
+          hl7-fhir-r4-core.iso21090-ADXP-postBox
+          hl7-fhir-r4-core.Address},
+ schema {:zen/tags #{zen/schema zen.fhir/structure-schema},
+         :zen/desc "Erweiterung des komplexen Datentyps Address zur Verwendung im Kontext der Deutschen Basis-Profile",
+         :zen.fhir/type "Address",
+         :zen.fhir/profileUri "http://fhir.de/StructureDefinition/address-de-basis",
+         :zen.fhir/version "0.6.30-7",
+         :confirms #{hl7-fhir-r4-core.Address/schema},
+         :type zen/map,
+         :keys {:_line {:type zen/vector,
+                        :every {:type zen/map,
+                                :keys {:Strasse {:confirms #{hl7-fhir-r4-core.iso21090-ADXP-streetName/schema},
+                                                 :fhir/extensionUri "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
+                                                 :zen/desc "Strassenname (ohne Hausnummer)"},
+                                       :Hausnummer {:confirms #{hl7-fhir-r4-core.iso21090-ADXP-houseNumber/schema},
+                                                    :fhir/extensionUri "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
+                                                    :zen/desc "Hausnummer"},
+                                       :Adresszusatz {:confirms #{hl7-fhir-r4-core.iso21090-ADXP-additionalLocator/schema},
+                                                      :fhir/extensionUri "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-additionalLocator",
+                                                      :zen/desc "Adresszusatz"},
+                                       :Postfach {:confirms #{hl7-fhir-r4-core.iso21090-ADXP-postBox/schema},
+                                                  :fhir/extensionUri "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-postBox",
+                                                  :zen/desc "Postfach"}}}},
+                :state {:zen.fhir/value-set {:symbol de-basisprofil-r4.value-set.ValueSetISO31662DE/value-set,
+                                             :strength :preferred},
+                        :zen/desc "Bundesland"},
+                :line {:type zen/vector,
+                       :every {:zen/desc "Straßenname mit Hausnummer oder Postfach sowie weitere Angaben zur Zustellung"},
+                       :maxItems 3},
+                :postalCode {:zen/desc "Postleitzahl"},
+                :country {:zen.fhir/value-set {:symbol hl7-fhir-r4-core.value-set.iso3166-1-2/value-set,
+                                               :strength :preferred},
+                          :zen/desc "Staat"},
+                :Stadtteil {:confirms #{hl7-fhir-r4-core.iso21090-ADXP-precinct/schema},
+                            :fhir/extensionUri "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-precinct",
+                            :zen/desc "Stadt- oder Ortsteil"}}}}

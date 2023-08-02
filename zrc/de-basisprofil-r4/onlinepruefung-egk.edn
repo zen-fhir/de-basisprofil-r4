@@ -1,0 +1,21 @@
+{ns de-basisprofil-r4.onlinepruefung-egk,
+ import #{hl7-fhir-r4-core.code
+          zen.fhir
+          hl7-fhir-r4-core.dateTime
+          hl7-fhir-r4-core.string},
+ schema {:zen.fhir/version "0.6.30-7",
+         :zen/tags #{zen.fhir/extension
+                     zen/schema
+                     zen.fhir/structure-schema},
+         :zen.fhir/profileUri "http://fhir.de/StructureDefinition/gkv/onlinepruefung-egk",
+         :require #{:ergebnis :errorCode :timestamp},
+         :type zen/map,
+         :zen/desc "Informationen zur Onlineprüfung und -aktualisierung \r\nVgl.: Anwendung der eGK  Technische Anlage zu Anlage 4a (BMV-Ä)  Verarbeitung KVK/eGK im Rahmen der vertragsärztlichen Abrechnung im Basis-Rollout  [KBV_ITA_VGEX_Mapping_KVK.pdf] - Kapitel 2.4.1",
+         :keys {:timestamp {:confirms #{hl7-fhir-r4-core.dateTime/schema},
+                            :zen/desc "Datum und Uhrzeit der Onlineprüfung und -aktualisierung"},
+                :ergebnis {:confirms #{hl7-fhir-r4-core.code/schema},
+                           :zen/desc "Ergebnis der Onlineprüfung und -aktualisierung"},
+                :errorCode {:confirms #{hl7-fhir-r4-core.code/schema},
+                            :zen/desc "Error-Code"},
+                :pruefzifferFachdienst {:confirms #{hl7-fhir-r4-core.string/schema},
+                                        :zen/desc "Prüfziffer des Fachdienstes"}}}}

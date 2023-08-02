@@ -1,0 +1,22 @@
+{ns de-basisprofil-r4.informationrecipient,
+ import #{hl7-fhir-r4-core.Device
+          zen.fhir
+          hl7-fhir-r4-core.RelatedPerson
+          hl7-fhir-r4-core.Patient
+          hl7-fhir-r4-core.PractitionerRole
+          hl7-fhir-r4-core.Practitioner
+          hl7-fhir-r4-core.Organization},
+ schema {:zen/tags #{zen.fhir/extension
+                     zen/schema
+                     zen.fhir/structure-schema},
+         :zen/desc "Dokumentation des Empfängers von Information (z.B. eines Dokumentes)",
+         :zen.fhir/type "Reference",
+         :zen.fhir/profileUri "http://fhir.de/StructureDefinition/informationrecipient",
+         :zen.fhir/version "0.6.30-7",
+         :confirms #{zen.fhir/Reference},
+         :zen.fhir/reference {:refers #{hl7-fhir-r4-core.Patient/schema
+                                        hl7-fhir-r4-core.PractitionerRole/schema
+                                        hl7-fhir-r4-core.Organization/schema
+                                        hl7-fhir-r4-core.Device/schema
+                                        hl7-fhir-r4-core.Practitioner/schema
+                                        hl7-fhir-r4-core.RelatedPerson/schema}}}}

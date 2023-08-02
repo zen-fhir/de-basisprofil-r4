@@ -1,0 +1,11 @@
+{ns de-basisprofil-r4.identifier-standortnummer,
+ import #{zen.fhir hl7-fhir-r4-core.Identifier},
+ schema {:zen.fhir/version "0.6.30-7",
+         :confirms #{hl7-fhir-r4-core.Identifier/schema},
+         :zen/tags #{zen/schema zen.fhir/structure-schema},
+         :zen.fhir/profileUri "http://fhir.de/StructureDefinition/identifier-standortnummer",
+         :require #{:system :value},
+         :type zen/map,
+         :zen/desc "Die Standortnummer dient der eindeutigen Identifikation eines Standortes oder der Ambulanzen eines Krankenhauses. Vgl. § 293 Abs. 6 SGB V. Es ist zu beachten, dass der zugrundeliegende Namensraum nicht stabil ist und Identifier neu vergeben werden können (siehe Anlage 1 Form und Inhalt der Nutzdaten zur Vereinbarung gemäß § 293 Abs. 6 SGB V).",
+         :keys {:system {:const {:value "http://fhir.de/sid/dkgev/standortnummer"}}},
+         :zen.fhir/type "Identifier"}}

@@ -1,0 +1,12 @@
+{ns de-basisprofil-r4.search.Condition-related,
+ import #{zen.fhir},
+ search {:zen/tags #{zen.fhir/search},
+         :fhir/id "Condition-related",
+         :fhir/url "http://fhir.de/SearchParameter/Condition-related",
+         :fhir/type "reference",
+         :name "related",
+         :expr {:Condition {:knife [["extension('http://hl7.org/fhir/StructureDefinition/condition-related'"
+                                     "value"]],
+                            :jsonpath ["$.\"extension('http://hl7.org/fhir/StructureDefinition/condition-related'\".\"value\"[*]"],
+                            :data-types #{},
+                            :template :reference}}}}

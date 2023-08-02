@@ -1,0 +1,8 @@
+{ns de-basisprofil-r4.value-set.1.2.276.0.76.11.37--20190517134631,
+ import #{zen.fhir},
+ value-set {:zen/tags #{zen.fhir/value-set},
+            :zen/desc "**practiceSettingCode (XDSDocumentEntry)**\r\nThe code for an XDS Document that specifies the clinical specialty where the act that resulted in the document was performed (e.g., Family Practice, Laboratory, Radiology).",
+            :zen.fhir/version "0.6.30-7",
+            :fhir/code-systems #{},
+            :uri "http://ihe-d.de/ValueSets/IHEXDSpracticeSettingCode",
+            :version "2019-05-17T13:46:31"}}

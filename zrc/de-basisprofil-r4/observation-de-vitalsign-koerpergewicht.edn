@@ -1,0 +1,22 @@
+{ns de-basisprofil-r4.observation-de-vitalsign-koerpergewicht,
+ import #{de-basisprofil-r4.value-set.VitalSignDE-Body-Weigth-UCUM
+          zen.fhir
+          de-basisprofil-r4.VitalSignDE},
+ schema {:zen/tags #{zen.fhir/profile-schema zen/schema},
+         :zen.fhir/type "Observation",
+         :zen.fhir/profileUri "http://fhir.de/StructureDefinition/observation-de-vitalsign-koerpergewicht",
+         :zen.fhir/version "0.6.30-7",
+         :confirms #{de-basisprofil-r4.VitalSignDE/schema
+                     zen.fhir/Resource},
+         :type zen/map,
+         :keys {:code {:match {:coding #{{:system "http://loinc.org",
+                                          :code "29463-7"}}},
+                       :type zen/map,
+                       :keys {:coding {:type zen/vector,
+                                       :slicing {:slices {}},
+                                       :minItems 1}},
+                       :require #{:coding}},
+                :value {:fhir/polymorphic true,
+                        :type zen/map,
+                        :keys {:Quantity {:zen.fhir/value-set {:symbol de-basisprofil-r4.value-set.VitalSignDE-Body-Weigth-UCUM/value-set,
+                                                               :strength :required}}}}}}}

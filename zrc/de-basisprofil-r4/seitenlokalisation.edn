@@ -1,0 +1,10 @@
+{ns de-basisprofil-r4.seitenlokalisation,
+ import #{zen.fhir hl7-fhir-r4-core.Coding},
+ schema {:zen/tags #{zen.fhir/extension
+                     zen/schema
+                     zen.fhir/structure-schema},
+         :zen/desc "Dokumentation der Lateralität bei OPS und ICD-10 Codes",
+         :zen.fhir/type "Coding",
+         :zen.fhir/profileUri "http://fhir.de/StructureDefinition/seitenlokalisation",
+         :zen.fhir/version "0.6.30-7",
+         :confirms #{hl7-fhir-r4-core.Coding/schema}}}

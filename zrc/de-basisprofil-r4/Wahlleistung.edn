@@ -1,0 +1,14 @@
+{ns de-basisprofil-r4.Wahlleistung,
+ import #{zen.fhir
+          de-basisprofil-r4.value-set.wahlleistungen-de
+          hl7-fhir-r4-core.Coding},
+ schema {:zen/tags #{zen.fhir/extension
+                     zen/schema
+                     zen.fhir/structure-schema},
+         :zen/desc "Dokumentation von gewünschten Wahlleistungen (Unterkunft und Ärztliche Wahlleistungen) während eines Kontaktes mit einer Gesundheitseinrichtung",
+         :zen.fhir/type "Coding",
+         :zen.fhir/profileUri "http://fhir.de/StructureDefinition/Wahlleistung",
+         :zen.fhir/version "0.6.30-7",
+         :confirms #{hl7-fhir-r4-core.Coding/schema},
+         :zen.fhir/value-set {:symbol de-basisprofil-r4.value-set.wahlleistungen-de/value-set,
+                              :strength :preferred}}}

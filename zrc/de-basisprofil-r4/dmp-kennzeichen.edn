@@ -1,0 +1,10 @@
+{ns de-basisprofil-r4.dmp-kennzeichen,
+ import #{zen.fhir hl7-fhir-r4-core.Coding},
+ schema {:zen/tags #{zen.fhir/extension
+                     zen/schema
+                     zen.fhir/structure-schema},
+         :zen/desc "Gibt die Teilnahme des Versicherten an einem Disease Management Program\r\nan. Das DMP-Kennzeichen findet derzeit aufgrund bilateraler vertraglicher\r\nVerpflichtungen von einzelnen Kostenträgern und Leistungserbringern noch\r\nVerwendung. Das DMP-Kennzeichen wird in diesem Zusammenhang als\r\nAngabe zum Nachweis von Wahltarifen nach § 53 SGB V bzw. der Angaben\r\nzum Nachweis von zusätzlichen Vertragsverhältnissen verwendet.",
+         :zen.fhir/type "Coding",
+         :zen.fhir/profileUri "http://fhir.de/StructureDefinition/gkv/dmp-kennzeichen",
+         :zen.fhir/version "0.6.30-7",
+         :confirms #{hl7-fhir-r4-core.Coding/schema}}}

@@ -1,0 +1,10 @@
+{ns de-basisprofil-r4.humanname-namenszusatz,
+ import #{zen.fhir hl7-fhir-r4-core.string},
+ schema {:zen/tags #{zen.fhir/extension
+                     zen/schema
+                     zen.fhir/structure-schema},
+         :zen/desc "Namenszusatz",
+         :zen.fhir/type "string",
+         :zen.fhir/profileUri "http://fhir.de/StructureDefinition/humanname-namenszusatz",
+         :zen.fhir/version "0.6.30-7",
+         :confirms #{hl7-fhir-r4-core.string/schema}}}

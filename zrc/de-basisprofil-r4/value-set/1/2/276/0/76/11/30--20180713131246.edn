@@ -1,0 +1,18 @@
+{ns de-basisprofil-r4.value-set.1.2.276.0.76.11.30--20180713131246,
+ import #{zen.fhir},
+ value-set {:zen/tags #{zen.fhir/value-set},
+            :zen/desc "**authorRole (XDSDocumentEntry or XDSSubmissionSet)**\r\nRepresents the role of the author with respect to the patient at the time that an XDS Document or XDS Submission Set was created.",
+            :zen.fhir/version "0.6.30-7",
+            :fhir/code-systems #{{:fhir/url "http://ihe-d.de/CodeSystems/ProzessrollenFuerAutoren",
+                                  :zen.fhir/content :bundled}
+                                 {:fhir/url "http://ihe-d.de/CodeSystems/PatientenbeziehungsrollenFuerAutoren",
+                                  :zen.fhir/content :bundled}},
+            :uri "http://ihe-d.de/ValueSets/IHEXDSauthorRole",
+            :version "2018-07-13T13:12:46",
+            :ftr {:module "de-basisprofil-r4",
+                  :source-url "https://storage.googleapis.com",
+                  :source-type :cloud-storage,
+                  :ftr-path "ftr",
+                  :tag "init",
+                  :validation-index {:type :nippy,
+                                     :file "index.nippy"}}}}

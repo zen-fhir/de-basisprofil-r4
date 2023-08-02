@@ -1,0 +1,48 @@
+{ns de-basisprofil-r4.VitalSignDE,
+ import #{hl7-fhir-r4-core.Observation
+          zen.fhir
+          hl7-fhir-r4-core.Group
+          de-basisprofil-r4.value-set.UcumVitalsCommonDE
+          hl7-fhir-r4-core.Patient},
+ schema {:zen.fhir/version "0.6.30-7",
+         :confirms #{hl7-fhir-r4-core.Observation/schema
+                     zen.fhir/Resource},
+         :zen/tags #{zen.fhir/profile-schema zen/schema},
+         :zen.fhir/profileUri "http://fhir.de/StructureDefinition/observation-de-vitalsign",
+         :require #{:category :effective :subject},
+         :type zen/map,
+         :keys {:category {:type zen/vector,
+                           :slicing {:slices {"vs-cat" {:schema {:type zen/vector,
+                                                                 :minItems 1,
+                                                                 :maxItems 1},
+                                                        :filter {:engine :match,
+                                                                 :match {:coding #{{:system "http://terminology.hl7.org/CodeSystem/observation-category",
+                                                                                    :code "vital-signs"}}}}}}},
+                           :minItems 1},
+                :subject {:confirms #{zen.fhir/Reference},
+                          :zen.fhir/reference {:refers #{hl7-fhir-r4-core.Patient/schema
+                                                         hl7-fhir-r4-core.Group/schema}}},
+                :effective {:fhir/polymorphic true, :type zen/map},
+                :value {:fhir/polymorphic true,
+                        :type zen/map,
+                        :keys {:Quantity {:type zen/map,
+                                          :keys {:system {:match "http://unitsofmeasure.org"}},
+                                          :require #{:system
+                                                     :unit
+                                                     :value
+                                                     :code},
+                                          :zen.fhir/value-set {:symbol de-basisprofil-r4.value-set.UcumVitalsCommonDE/value-set,
+                                                               :strength :required}}}},
+                :component {:type zen/vector,
+                            :every {:type zen/map,
+                                    :keys {:value {:fhir/polymorphic true,
+                                                   :type zen/map,
+                                                   :keys {:Quantity {:type zen/map,
+                                                                     :keys {:system {:match "http://unitsofmeasure.org"}},
+                                                                     :require #{:system
+                                                                                :unit
+                                                                                :value
+                                                                                :code},
+                                                                     :zen.fhir/value-set {:symbol de-basisprofil-r4.value-set.UcumVitalsCommonDE/value-set,
+                                                                                          :strength :required}}}}}}}},
+         :zen.fhir/type "Observation"}}

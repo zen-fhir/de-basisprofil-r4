@@ -1,0 +1,39 @@
+{ns de-basisprofil-r4.coverage-de-sel,
+ import #{zen.fhir
+          hl7-fhir-r4-core.RelatedPerson
+          hl7-fhir-r4-core.Patient
+          de-basisprofil-r4.coverage-de-basis
+          hl7-fhir-r4-core.Organization},
+ schema {:zen/tags #{zen.fhir/profile-schema zen/schema},
+         :zen/desc "Profil für die Nutzung der Coverage-Resource in Deutschland zur Darstellung eines Selbstzahlerverhältnisses.",
+         :zen.fhir/type "Coverage",
+         :zen.fhir/profileUri "http://fhir.de/StructureDefinition/coverage-de-sel",
+         :zen.fhir/version "0.6.30-7",
+         :confirms #{zen.fhir/Resource
+                     de-basisprofil-r4.coverage-de-basis/schema},
+         :type zen/map,
+         :keys {:identifier {:type zen/vector,
+                             :slicing {:slices {"pkv" {:schema {:type zen/vector,
+                                                                :maxItems 1},
+                                                       :filter {:engine :match,
+                                                                :match {:type {:coding #{{:system "http://fhir.de/CodeSystem/identifier-type-de-basis",
+                                                                                          :code "PKV"}}}}}}}}},
+                :type {:type zen/map,
+                       :keys {:coding {:type zen/vector,
+                                       :slicing {:slices {"VersicherungsArtDeBasis" {:schema {:type zen/vector,
+                                                                                              :minItems 1,
+                                                                                              :maxItems 1},
+                                                                                     :filter {:engine :match,
+                                                                                              :match {:system "http://fhir.de/CodeSystem/versicherungsart-de-basis",
+                                                                                                      :code "SEL"}}}}},
+                                       :minItems 1}},
+                       :require #{:coding}},
+                :subscriber {:confirms #{zen.fhir/Reference},
+                             :zen.fhir/reference {:refers #{}},
+                             :zen/desc "Unterzeichner der Kostenübernahme"},
+                :payor {:type zen/vector,
+                        :every {:confirms #{zen.fhir/Reference},
+                                :zen.fhir/reference {:refers #{hl7-fhir-r4-core.Patient/schema
+                                                               hl7-fhir-r4-core.Organization/schema
+                                                               hl7-fhir-r4-core.RelatedPerson/schema}},
+                                :zen/desc "Kostenübernehmer"}}}}}

@@ -1,0 +1,14 @@
+{ns de-basisprofil-r4.zuzahlungsstatus,
+ import #{zen.fhir hl7-fhir-r4-core.boolean hl7-fhir-r4-core.date},
+ schema {:zen.fhir/version "0.6.30-7",
+         :zen/tags #{zen.fhir/extension
+                     zen/schema
+                     zen.fhir/structure-schema},
+         :zen.fhir/profileUri "http://fhir.de/StructureDefinition/gkv/zuzahlungsstatus",
+         :require #{:status},
+         :type zen/map,
+         :zen/desc "Gibt an, ob für den Versicherten eine Befreiung von der Zuzahlungspflicht nach § 62 Abs. 3 SGB V vorliegt.",
+         :keys {:status {:confirms #{hl7-fhir-r4-core.boolean/schema},
+                         :zen/desc "Status der Befreiung"},
+                :gueltigBis {:confirms #{hl7-fhir-r4-core.date/schema},
+                             :zen/desc "Ende der Gültigkeit"}}}}
