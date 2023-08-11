@@ -8,7 +8,7 @@
          :zen/desc "Profil für die Nutzung der Coverage-Resource in Deutschland zur Darstellung eines Selbstzahlerverhältnisses.",
          :zen.fhir/type "Coverage",
          :zen.fhir/profileUri "http://fhir.de/StructureDefinition/coverage-de-sel",
-         :zen.fhir/version "0.6.30-11",
+         :zen.fhir/version "0.6.30-12",
          :confirms #{zen.fhir/Resource
                      de-basisprofil-r4.coverage-de-basis/schema},
          :type zen/map,

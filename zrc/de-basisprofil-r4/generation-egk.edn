@@ -6,5 +6,5 @@
          :zen/desc "Extension zur Erfassung der Generation der eGK",
          :zen.fhir/type "string",
          :zen.fhir/profileUri "http://fhir.de/StructureDefinition/gkv/generation-egk",
-         :zen.fhir/version "0.6.30-11",
+         :zen.fhir/version "0.6.30-12",
          :confirms #{hl7-fhir-r4-core.string/schema}}}

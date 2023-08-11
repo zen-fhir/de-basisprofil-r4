@@ -2,7 +2,7 @@
  import #{zen.fhir},
  value-set {:zen/tags #{zen.fhir/value-set},
             :zen/desc "**formatCode (XDSDocumentEntry)**\r\nGlobally unique code specifying the format of an XDS Document. Along with the typeCode, it should provide sufficient information to allow a potential consumer to know if it will be able to process the document.",
-            :zen.fhir/version "0.6.30-11",
+            :zen.fhir/version "0.6.30-12",
             :fhir/code-systems #{{:fhir/url "http://ihe-d.de/CodeSystems/DeutscheDokumentenformate",
                                   :zen.fhir/content :bundled}},
             :uri "http://ihe-d.de/ValueSets/IHEXDSformatCodeDE",

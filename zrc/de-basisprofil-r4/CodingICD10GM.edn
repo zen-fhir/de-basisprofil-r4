@@ -4,7 +4,7 @@
           hl7-fhir-r4-core.Coding
           de-basisprofil-r4.icd-10-gm-diagnosesicherheit
           de-basisprofil-r4.icd-10-gm-mehrfachcodierungs-kennzeichen},
- schema {:zen.fhir/version "0.6.30-11",
+ schema {:zen.fhir/version "0.6.30-12",
          :confirms #{hl7-fhir-r4-core.Coding/schema},
          :zen/tags #{zen/schema zen.fhir/structure-schema},
          :zen.fhir/profileUri "http://fhir.de/StructureDefinition/CodingICD10GM",

@@ -4,7 +4,7 @@
          :zen/desc "Beschreibt den Grad der Behinderung und ggf. vorhandene Merkzeichen",
          :zen.fhir/type "Observation",
          :zen.fhir/profileUri "http://fhir.de/StructureDefinition/GradDerBehinderung",
-         :zen.fhir/version "0.6.30-11",
+         :zen.fhir/version "0.6.30-12",
          :confirms #{hl7-fhir-r4-core.Observation/schema
                      zen.fhir/Resource},
          :type zen/map,
