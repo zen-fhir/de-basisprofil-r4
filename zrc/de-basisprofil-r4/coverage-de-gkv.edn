@@ -14,7 +14,7 @@
           de-basisprofil-r4.ruhender-leistungsanspruch
           de-basisprofil-r4.besondere-personengruppe
           de-basisprofil-r4.version-vsdm},
- schema {:zen.fhir/version "0.6.30-10",
+ schema {:zen.fhir/version "0.6.30-11",
          :confirms #{zen.fhir/Resource
                      de-basisprofil-r4.coverage-de-basis/schema},
          :zen/tags #{zen.fhir/profile-schema zen/schema},

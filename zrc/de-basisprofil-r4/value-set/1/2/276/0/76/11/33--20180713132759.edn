@@ -2,7 +2,7 @@
  import #{zen.fhir},
  value-set {:zen/tags #{zen.fhir/value-set},
             :zen/desc "**confidentialityCode (XDSDocumentEntry)**\r\nThe code specifying the level of confidentiality of an XDS Document.",
-            :zen.fhir/version "0.6.30-10",
+            :zen.fhir/version "0.6.30-11",
             :fhir/code-systems #{{:fhir/url "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
                                   :zen.fhir/content :bundled}
                                  {:fhir/url "http://ihe-d.de/CodeSystems/BetroffeneneinschaetzungVertraulichkeitsstufe",
