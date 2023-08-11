@@ -5,5 +5,5 @@
                      zen.fhir/structure-schema},
          :zen.fhir/type "Coding",
          :zen.fhir/profileUri "http://fhir.de/StructureDefinition/icd-10-gm-diagnosesicherheit",
-         :zen.fhir/version "0.6.30-7",
+         :zen.fhir/version "0.6.30-10",
          :confirms #{hl7-fhir-r4-core.Coding/schema}}}

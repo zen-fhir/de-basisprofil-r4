@@ -2,7 +2,7 @@
  import #{zen.fhir},
  value-set {:zen/tags #{zen.fhir/value-set},
             :zen/desc "Die Alpha-ID ermöglicht es, medizinische und alltagssprachliche Diagnosenbezeichnungen zu kodieren, stellt also Diagnosenkodes zur Verfügung. 2005 als Prototyp vom DIMDI herausgegeben basiert die Alpha-ID auf dem Alphabetischen Verzeichnis zur ICD-10-GM. Jedem Eintrag des Alphabets ist eine fortlaufende, stabile, nichtsprechende Identifikationsnummer zugeordnet: der Alpha-ID-Kode. Er identifiziert den Eintrag eindeutig und übernimmt somit die Funktion eines nichtklassifizierenden Diagnosenkodes.",
-            :zen.fhir/version "0.6.30-7",
+            :zen.fhir/version "0.6.30-10",
             :fhir/code-systems #{{:fhir/url "http://fhir.de/CodeSystem/bfarm/alpha-id",
                                   :zen.fhir/content :not-present}},
             :uri "http://fhir.de/ValueSet/bfarm/alpha-id",

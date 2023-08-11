@@ -1,7 +1,7 @@
 {ns de-basisprofil-r4.value-set.AbrechnungsDiagnoseProzedur,
  import #{zen.fhir},
  value-set {:zen/tags #{zen.fhir/value-set},
-            :zen.fhir/version "0.6.30-7",
+            :zen.fhir/version "0.6.30-10",
             :fhir/code-systems #{{:fhir/url "http://fhir.de/CodeSystem/KontaktDiagnoseProzedur",
                                   :zen.fhir/content :bundled}},
             :uri "http://fhir.de/ValueSet/AbrechnungsDiagnoseProzedur",

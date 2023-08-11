@@ -1,6 +1,6 @@
 {ns de-basisprofil-r4.CodingAlphaID,
  import #{zen.fhir hl7-fhir-r4-core.Coding},
- schema {:zen.fhir/version "0.6.30-7",
+ schema {:zen.fhir/version "0.6.30-10",
          :confirms #{hl7-fhir-r4-core.Coding/schema},
          :zen/tags #{zen/schema zen.fhir/structure-schema},
          :zen.fhir/profileUri "http://fhir.de/StructureDefinition/CodingAlphaID",

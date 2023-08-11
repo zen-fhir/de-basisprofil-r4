@@ -2,7 +2,7 @@
  import #{zen.fhir},
  value-set {:zen/tags #{zen.fhir/value-set},
             :zen/desc "**eventCodeList (XDSDocumentEntry)**\r\nThis list of codes represents the main clinical acts being documented in an XDS Document.",
-            :zen.fhir/version "0.6.30-7",
+            :zen.fhir/version "0.6.30-10",
             :fhir/code-systems #{{:fhir/url "http://ihe-d.de/CodeSystems/FallkontextBeiDokumentenerstellung",
                                   :zen.fhir/content :not-present}
                                  {:fhir/url "urn:oid:1.2.840.10008.6.1.19",

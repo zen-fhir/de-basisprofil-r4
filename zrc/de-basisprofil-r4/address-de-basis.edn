@@ -12,7 +12,7 @@
          :zen/desc "Erweiterung des komplexen Datentyps Address zur Verwendung im Kontext der Deutschen Basis-Profile",
          :zen.fhir/type "Address",
          :zen.fhir/profileUri "http://fhir.de/StructureDefinition/address-de-basis",
-         :zen.fhir/version "0.6.30-7",
+         :zen.fhir/version "0.6.30-10",
          :confirms #{hl7-fhir-r4-core.Address/schema},
          :type zen/map,
          :keys {:_line {:type zen/vector,
