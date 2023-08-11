@@ -1,6 +1,6 @@
 {ns de-basisprofil-r4.ruhender-leistungsanspruch,
  import #{hl7-fhir-r4-core.Period zen.fhir hl7-fhir-r4-core.Coding},
- schema {:zen.fhir/version "0.6.30-13",
+ schema {:zen.fhir/version "0.6.30-14",
          :zen/tags #{zen.fhir/extension
                      zen/schema
                      zen.fhir/structure-schema},

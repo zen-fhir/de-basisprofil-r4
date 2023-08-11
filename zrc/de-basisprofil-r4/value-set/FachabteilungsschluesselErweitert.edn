@@ -2,7 +2,7 @@
  import #{zen.fhir},
  value-set {:zen/tags #{zen.fhir/value-set},
             :zen/desc "Fachabteilungen gemäß Anhang 1 der BPflV in der am 31.12.2003 geltenden Fassung inkl. Spezialisierungen",
-            :zen.fhir/version "0.6.30-13",
+            :zen.fhir/version "0.6.30-14",
             :fhir/code-systems #{{:fhir/url "http://fhir.de/CodeSystem/dkgev/Fachabteilungsschluessel-erweitert",
                                   :zen.fhir/content :not-present}},
             :uri "http://fhir.de/ValueSet/dkgev/Fachabteilungsschluessel-erweitert",

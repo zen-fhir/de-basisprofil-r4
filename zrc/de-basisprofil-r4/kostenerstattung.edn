@@ -5,7 +5,7 @@
                      zen.fhir/structure-schema},
          :zen/desc "Gibt an, ob der Kostenträger den Nachweis der Inanspruchnahme von Leisrungen der Abrechnungsart Kostnerstattung auf der eGK speichert.\r\nvorhanden = Nachweis wird genutzt;\r\nnicht vorhanden = Nachweis wird nicht genutzt",
          :zen.fhir/profileUri "http://fhir.de/StructureDefinition/gkv/kostenerstattung",
-         :zen.fhir/version "0.6.30-13",
+         :zen.fhir/version "0.6.30-14",
          :type zen/map,
          :keys {:aerztlicheVersorgung {:confirms #{hl7-fhir-r4-core.boolean/schema}},
                 :zahnaerztlicheVersorgung {:confirms #{hl7-fhir-r4-core.boolean/schema}},

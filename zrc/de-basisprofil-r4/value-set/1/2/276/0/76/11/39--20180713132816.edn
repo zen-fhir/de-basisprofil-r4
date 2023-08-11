@@ -2,7 +2,7 @@
  import #{zen.fhir},
  value-set {:zen/tags #{zen.fhir/value-set},
             :zen/desc "**contentTypeCode (XDSSubmissionSet)**\r\nThe code specifying the type of clinical activity that resulted in placing XDS Documents in a SubmissionSet.",
-            :zen.fhir/version "0.6.30-13",
+            :zen.fhir/version "0.6.30-14",
             :fhir/code-systems #{{:fhir/url "http://ihe-d.de/CodeSystems/GrundDerUebermittlung",
                                   :zen.fhir/content :bundled}},
             :uri "http://ihe-d.de/ValueSets/IHEXDScontentTypeCode",

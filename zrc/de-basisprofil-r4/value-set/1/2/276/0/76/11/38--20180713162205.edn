@@ -2,7 +2,7 @@
  import #{zen.fhir},
  value-set {:zen/tags #{zen.fhir/value-set},
             :zen/desc "**typeCode (XDSDocumentEntry)**\r\nA low-level classification of XDS Documents within a classCode that describes class, event, specialty, and setting.",
-            :zen.fhir/version "0.6.30-13",
+            :zen.fhir/version "0.6.30-14",
             :fhir/code-systems #{{:fhir/url "http://ihe-d.de/CodeSystems/IHEXDStypeCode",
                                   :zen.fhir/content :bundled}
                                  {:fhir/url "http://loinc.org",
