@@ -8,7 +8,7 @@
          :zen/desc "Extension zur genaueren Differenzierung des administrativen Geschlechts 'other', vgl. https://wiki.hl7.de/index.php?title=Geschlecht#administratives_Geschlecht.",
          :zen.fhir/type "Coding",
          :zen.fhir/profileUri "http://fhir.de/StructureDefinition/gender-amtlich-de",
-         :zen.fhir/version "0.6.30-12",
+         :zen.fhir/version "0.6.30-13",
          :confirms #{hl7-fhir-r4-core.Coding/schema},
          :zen.fhir/value-set {:symbol de-basisprofil-r4.value-set.ValueSet-GenderOtherDE/value-set,
                               :strength :required}}}

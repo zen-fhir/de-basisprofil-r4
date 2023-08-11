@@ -2,7 +2,7 @@
  import #{zen.fhir},
  value-set {:zen/tags #{zen.fhir/value-set},
             :zen/desc "Enthaelt die ISO-3166-2:DE Codes für die deutschen Bundeslaender.",
-            :zen.fhir/version "0.6.30-12",
+            :zen.fhir/version "0.6.30-13",
             :fhir/code-systems #{{:fhir/url "urn:iso:std:iso:3166-2:de",
                                   :zen.fhir/content :bundled}},
             :uri "http://fhir.de/ValueSet/iso/bundeslaender",

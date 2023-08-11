@@ -2,7 +2,7 @@
  import #{zen.fhir},
  value-set {:zen/tags #{zen.fhir/value-set},
             :zen/desc "**healthcareFacilityTypeCode (XDSDocumentEntry)**\r\nThis code for an XDS Document represents the type of organizational setting of the clinical encounter during which the documented act occurred.",
-            :zen.fhir/version "0.6.30-12",
+            :zen.fhir/version "0.6.30-13",
             :fhir/code-systems #{{:fhir/url "http://ihe-d.de/CodeSystems/PatientBezogenenGesundheitsversorgung",
                                   :zen.fhir/content :bundled}
                                  {:fhir/url "http://ihe-d.de/CodeSystems/NichtPatientBezogeneGesundheitsversorgung",

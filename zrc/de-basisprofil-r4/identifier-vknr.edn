@@ -2,7 +2,7 @@
  import #{zen.fhir
           de-basisprofil-r4.value-set.valueset-identifier-type-de-basis
           hl7-fhir-r4-core.Identifier},
- schema {:zen.fhir/version "0.6.30-12",
+ schema {:zen.fhir/version "0.6.30-13",
          :confirms #{hl7-fhir-r4-core.Identifier/schema},
          :zen/tags #{zen/schema zen.fhir/structure-schema},
          :zen.fhir/profileUri "http://fhir.de/StructureDefinition/identifier-vknr",
