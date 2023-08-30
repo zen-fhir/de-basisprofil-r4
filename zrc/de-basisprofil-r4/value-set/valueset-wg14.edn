@@ -2,7 +2,7 @@
  import #{zen.fhir},
  value-set {:zen/tags #{zen.fhir/value-set},
             :zen/desc "ABDATA WG14 (aut-idem-Auswahlgruppen, 'ABDA-KBV-Gruppen') für Medikamente",
-            :zen.fhir/version "0.6.30-14",
+            :zen.fhir/version "0.6.31",
             :fhir/code-systems #{{:fhir/url "http://fhir.de/CodeSystem/abdata/wg14",
                                   :zen.fhir/content :not-present}},
             :uri "http://fhir.de/ValueSet/abdata/wg14",

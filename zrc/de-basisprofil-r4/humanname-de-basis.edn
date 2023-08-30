@@ -9,7 +9,7 @@
          :zen/desc "Personenname mit in Deutschland üblichen Erweiterungen",
          :zen.fhir/type "HumanName",
          :zen.fhir/profileUri "http://fhir.de/StructureDefinition/humanname-de-basis",
-         :zen.fhir/version "0.6.30-14",
+         :zen.fhir/version "0.6.31",
          :confirms #{hl7-fhir-r4-core.HumanName/schema},
          :type zen/map,
          :keys {:_family {:type zen/map,

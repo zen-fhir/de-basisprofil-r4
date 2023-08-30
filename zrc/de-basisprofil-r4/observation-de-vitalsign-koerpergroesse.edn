@@ -5,7 +5,7 @@
  schema {:zen/tags #{zen.fhir/profile-schema zen/schema},
          :zen.fhir/type "Observation",
          :zen.fhir/profileUri "http://fhir.de/StructureDefinition/observation-de-vitalsign-koerpergroesse",
-         :zen.fhir/version "0.6.30-14",
+         :zen.fhir/version "0.6.31",
          :confirms #{de-basisprofil-r4.VitalSignDE/schema
                      zen.fhir/Resource},
          :type zen/map,

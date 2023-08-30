@@ -2,7 +2,7 @@
  import #{zen.fhir},
  value-set {:zen/tags #{zen.fhir/value-set},
             :zen/desc "Zusatzkennzeichen für postkoordinierte ICD-10-gm-Codes",
-            :zen.fhir/version "0.6.30-14",
+            :zen.fhir/version "0.6.31",
             :fhir/code-systems #{{:fhir/url "http://fhir.de/CodeSystem/icd-10-gm-mehrfachcodierungs-kennzeichen",
                                   :zen.fhir/content :bundled}},
             :uri "http://fhir.de/ValueSet/icd-10-gm-mehrfachcodierungs-kennzeichen",
