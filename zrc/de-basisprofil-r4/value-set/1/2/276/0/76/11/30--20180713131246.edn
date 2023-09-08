@@ -2,7 +2,7 @@
  import #{zen.fhir},
  value-set {:zen/tags #{zen.fhir/value-set},
             :zen/desc "**authorRole (XDSDocumentEntry or XDSSubmissionSet)**\r\nRepresents the role of the author with respect to the patient at the time that an XDS Document or XDS Submission Set was created.",
-            :zen.fhir/version "0.6.31",
+            :zen.fhir/version "0.6.32",
             :fhir/code-systems #{{:fhir/url "http://ihe-d.de/CodeSystems/ProzessrollenFuerAutoren",
                                   :zen.fhir/content :bundled}
                                  {:fhir/url "http://ihe-d.de/CodeSystems/PatientenbeziehungsrollenFuerAutoren",

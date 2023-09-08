@@ -2,7 +2,7 @@
  import #{zen.fhir},
  value-set {:zen/tags #{zen.fhir/value-set},
             :zen/desc "**authorSpecialty (XDSDocumentEntry or XDSSubmissionSet)**\r\nRepresents a specific specialty within a healthcare facility under which the human and/or machines authored the XDS Document or XDS SubmissionSet",
-            :zen.fhir/version "0.6.31",
+            :zen.fhir/version "0.6.32",
             :fhir/code-systems #{{:fhir/url "urn:oid:1.2.276.0.76.5.114",
                                   :zen.fhir/content :bundled}
                                  {:fhir/url "http://ihe-d.de/CodeSystems/QualifikationenNichtAerztlicherAutoren",

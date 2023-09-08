@@ -2,7 +2,7 @@
  import #{zen.fhir},
  value-set {:zen/tags #{zen.fhir/value-set},
             :zen/desc "Gebräuchliche Codes zur Kodierung von Resource.meta.tag",
-            :zen.fhir/version "0.6.31",
+            :zen.fhir/version "0.6.32",
             :fhir/code-systems #{{:fhir/url "http://fhir.de/CodeSystem/common-meta-tag-de",
                                   :zen.fhir/content :bundled}},
             :uri "http://fhir.de/ValueSet/common-meta-tag-de",
